@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
   
-aside {
-    position: relative;
-    width: 20em;
-    text-align: center;
-}
-  
 nav {
     background-color: steelblue;
     padding: 10px;
@@ -49,12 +43,25 @@ main {
     color: #000;
 }
 
-aside img {
+/* Specific Styles for ul.box and aside.box */
+ul.box {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+aside.box {
+    position: relative;
+    width: 20em;
+    text-align: center;
+}
+
+aside.box img {
     width: 200px;
     height: auto;
 }
   
-aside h2 {
+aside.box h2 {
     position: absolute;
     top: 47px;
     left: 150px;
