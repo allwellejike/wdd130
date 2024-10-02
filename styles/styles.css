@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+aside {
+    position: relative;
+    width: 20em;
+    text-align: center;
+}
   
 nav {
     background-color: steelblue;
@@ -43,18 +49,8 @@ main {
     color: #000 !important;
 }
 
-/* Specific Styles for ul.box and aside.box */
-ul.box {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
 
-aside {
-    position: relative;
-    width: 20em;
-    text-align: center;
-}
+
 
 aside img {
     width: 200px;
