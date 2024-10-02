@@ -36,11 +36,11 @@ main {
 }
  /* Class Selectors */
 .box {
-    margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, .1);
-    padding: 1rem;
-    background-color: #ddd;
-    color: #000;
+    margin: 1rem !important;
+    border: 1px solid rgba(0, 0, 0, .1) !important;
+    padding: 1rem !important;
+    background-color: #ddd !important;
+    color: #000 !important;
 }
 
 /* Specific Styles for ul.box and aside.box */
