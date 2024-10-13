@@ -1,107 +1,203 @@
 :root {
-    --primary-color: #002400; /* Dark Green */
-    --secondary-color: #000000; /* Black */
-    --accent1-color: #058E3F; /* Forest Green */
-    --accent2-color: #3A1B01; /* Bistre */
+  --primary-color: #002400; /* Dark Green */
+  --secondary-color: #000000; /* Black */
+  --accent1-color: #058E3F; /* Forest Green */
+  --accent2-color: #3A1B01; /* Bistre */
 }
-  
-h1, h2, h3 {
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    color: var(--primary-color);
-    padding: .5rem;
-}
-  
+
 body {
-    font-size: 16px;
-    font-family: Roboto, sans-serif;
-    font-weight: bold;
-    max-width: 1200px;
-    margin: 0 auto;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-  
+
+h1, h2, h3 {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  color: var(--primary-color);
+  padding: 0.5rem;
+}
+
+h3 {
+  font-size: 24px; /* added explicit styling for h3 */
+}
+
 p {
-    margin: 1em;
-    color: var(--secondary-color);
+  margin: 1em;
+  color: var(--secondary-color);
 }
-  
-.sociallinks {
-    text-decoration: none;
-    display: block;
-    padding: 1em;
-    color: var(--accent1-color);
+
+main {
+  padding: 0 20px;
+  margin: 0 20px;
 }
-  
-.sociallinks img {
-    width: 40px;
-    height: 40px;
+
+section {
+  padding: 2em 20px;
 }
-  
+
+.history {
+  background-color: #f7f7f7; /* added history section styling */
+  padding: 40px;
+}
+
 .hero {
-    position: relative;
+  position: relative;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
 }
-  
+
 .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
-  
+
 .hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    right: 10%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    color: var(--accent1-color);
-    text-align: center;
-    z-index: 1;
-    transform: translate(-10%, -50%);
-    background-color: rgba(199, 193, 230, 0.5);
-    color: var(--primary-color);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 97%;
-    margin-left: auto;
-    margin-right: auto;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: var(--accent1-color);
+  text-align: center; /* added text-align center */
+  background-color: rgba(199, 193, 230, 0.5);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  max-width: 900px;
 }
-  
+
 .hero article {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(199, 193, 230, 0.5);
-    color: var(--primary-color);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(199, 193, 230, 0.5);
+  color: var(--primary-color);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 900px;
 }
-  
+
 .hero article img {
-    float: right;
-    width: 30%;
-    margin: 10px;
-    border: 1px solid var(--secondary-color);
+  float: right;
+  width: 30%;
+  margin: 10px;
+  border: 1px solid var(--secondary-color);
 }
-  
+
 .hero article p {
-    text-align: justify;
-    margin-bottom: 20px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+header {
+  margin: 0 auto;
 }
 
 nav {
-    display: flex;
-    align-items: center; 
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
 }
-  
+
 nav a {
-    margin: 0.1em;
-    transition: color 0.2s ease;
-    text-decoration: none;
-    color: var(--secondary-color);
+  margin: 0.1em;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  color: var(--secondary-color);
 }
- 
-  
+
+nav a:hover {
+  color: var(--accent1-color);
+}
+
+.adventures {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.adventures figure {
+  margin: 0;
+}
+
+.adventures figcaption {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.sociallinks {
+  display: block;
+  color: var(--accent1-color);
+}
+
+.sociallinks li {
+  margin-right: 20px;
+}
+
+.sociallinks img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+footer {
+  text-align: left;
+  padding: 20px 0;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer li {
+  margin-right: 20px;
+}
+
+footer img {
+  width: 40px;
+  height: auto;
+}
+
+main > section {
+  margin: 20px;
+}
+
+main > .hero {
+  margin-bottom: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.image-gallery img {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
