@@ -12,15 +12,16 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  background-color: #f9f9f9; 
+  background-color: #f9f9f9;
   color: #666;
+  box-sizing: border-box; /* Added */
 }
-
 
 h1, h2, h3 {
   font-family: Lato, Arial, Helvetica, sans-serif;
   color: var(--primary-color);
   padding: 0.5rem;
+  margin: 0; /* Added */
 }
 
 h3 {
@@ -28,7 +29,7 @@ h3 {
 }
 
 p {
-  margin: 1em;
+  margin: 1em 0; /* Updated */
   color: var(--secondary-color);
 }
 
@@ -51,9 +52,8 @@ section {
   background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
-  background-color: #333; 
+  background-color: #333;
 }
-
 
 .hero img {
   display: block;
@@ -88,7 +88,6 @@ section {
   width: 90%;
   max-width: 900px;
 }
-
 
 .hero article img {
   float: right;
@@ -132,6 +131,7 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-width: 100%;
 }
+
 .adventures {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -169,14 +169,12 @@ footer {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
-  background-color: #333; 
+  background-color: #333;
 }
-
 
 footer p {
   margin-bottom: 10px;
 }
-
 
 footer ul {
   list-style: none;
@@ -216,24 +214,23 @@ main > .hero {
   border-radius: 10px;
 }
 
-/* Company Information */
 .company-info {
   margin-bottom: 40px;
 }
 
-  .wireframe-link {
-    font-size: 14px;
-    color: var(--secondary-color);
-    text-decoration: none;
+.wireframe-link {
+  font-size: 14px;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.wireframe-link:hover {
+  color: var(--accent1-color);
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .wireframe-link:hover {
-    color: var(--accent1-color);
-  }
-  
-  /* Media Queries (optional) */
-  @media (max-width: 768px) {
-    footer {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+}
