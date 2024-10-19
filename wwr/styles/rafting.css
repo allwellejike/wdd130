@@ -12,7 +12,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: #f9f9f9; 
+  color: #666;
 }
+
 
 h1, h2, h3 {
   font-family: Lato, Arial, Helvetica, sans-serif;
@@ -21,7 +24,7 @@ h1, h2, h3 {
 }
 
 h3 {
-  font-size: 24px; /* added explicit styling for h3 */
+  font-size: 24px;
 }
 
 p {
@@ -39,7 +42,7 @@ section {
 }
 
 .history {
-  background-color: #f7f7f7; /* added history section styling */
+  background-color: #f7f7f7;
   padding: 40px;
 }
 
@@ -48,7 +51,9 @@ section {
   background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
+  background-color: #333; 
 }
+
 
 .hero img {
   display: block;
@@ -63,7 +68,7 @@ section {
   transform: translate(-50%, -50%);
   font-size: 48px;
   color: var(--accent1-color);
-  text-align: center; /* added text-align center */
+  text-align: center;
   background-color: rgba(199, 193, 230, 0.5);
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -83,6 +88,7 @@ section {
   width: 90%;
   max-width: 900px;
 }
+
 
 .hero article img {
   float: right;
@@ -152,18 +158,17 @@ nav a:hover {
 
 footer {
   text-align: left;
-  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: #333; 
 }
+
 
 footer p {
   margin-bottom: 10px;
 }
 
-footer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-}
 
 footer ul {
   list-style: none;
@@ -201,3 +206,26 @@ main > .hero {
   width: 20%;
   height: auto;
   border-radius: 10px;
+}
+
+/* Company Information */
+.company-info {
+  margin-bottom: 40px;
+}
+
+  .wireframe-link {
+    font-size: 14px;
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+  
+  .wireframe-link:hover {
+    color: var(--accent1-color);
+  }
+  
+  /* Media Queries (optional) */
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
