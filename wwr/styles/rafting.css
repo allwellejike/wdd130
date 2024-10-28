@@ -184,8 +184,6 @@ nav a:hover {
   width: auto; /* Keep the original width */
   max-width: 100%; /* Ensure it fits within the container if needed */
   height: auto;
-
-);
 }
 
 .sociallinks li {
