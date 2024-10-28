@@ -276,10 +276,10 @@ main > .hero {
 /* Wireframe Link Styles */
 
 footer a[href*="moqups.com"] { /* Selects the wireframe link based on the URL */
-  color: var(--accent1-color);
+  color: #ffffff;
   text-decoration: none; /* Remove underline */
 }
 
-footer a[href*="moqups.com"]:hover { /* Change color on hover */
-  color: var(--secondary-color);
+footer a[href*="moqups.com"]:hover { /* Change color on hover */ 
+  color: var(--accent1-color);
 }
