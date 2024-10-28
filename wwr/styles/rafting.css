@@ -139,8 +139,12 @@ nav a {
   margin: 0.1em;
   transition: color 0.2s ease;
   text-decoration: none;
+  color: var(--secondary-color);
 }
 
+nav a:hover {
+  color: var(--accent1-color);
+}
 
 .google-map {
   width: 600px;
@@ -260,13 +264,22 @@ main > .hero {
   margin-bottom: 40px;
 }
 
-/* Wireframe Link Styles */
-.wireframe-link {
-  font-size: 14px;
+.company-info a {
   color: var(--secondary-color);
-  text-decoration: none;
+  text-decoration: none; /* Remove underline */
 }
 
-.wireframe-link:hover {
+.company-info a:hover {
+  color: var(--accent1-color); /* Change color on hover */
+}
+
+/* Wireframe Link Styles */
+
+footer a[href*="moqups.com"] { /* Selects the wireframe link based on the URL */
+  color: var(--secondary-color);
+  text-decoration: none; /* Remove underline */
+}
+
+footer a[href*="moqups.com"]:hover { /* Change color on hover */
   color: var(--accent1-color);
 }
