@@ -1,8 +1,18 @@
+/* Variables */
 :root {
   --primary-color: #002400; /* Dark Green */
   --secondary-color: #000000; /* Black */
   --accent1-color: #058E3F; /* Forest Green */
   --accent2-color: #3A1B01; /* Bistre */
+  --background-color: #f2f2f2;
+  --text-color: var(--secondary-color);
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -12,27 +22,28 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  background-color: #f2f2f2;
-  color: var(--secondary-color);
-  box-sizing: border-box; /* Added */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
+/* Typography */
 h1, h2, h3 {
   font-family: Lato, Arial, Helvetica, sans-serif;
   color: var(--primary-color);
   padding: 0.5rem;
-  margin: 0; /* Added */
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: ;
 }
 
 p {
-  margin: 1em 0; /* Updated */
-  color: var(--secondary-color);
+  margin: 1em 0;
+  color: --secondary-color #000000;
 }
 
+/* Layout */
 main {
   padding: 0 20px;
   margin: 0 20px;
@@ -42,9 +53,11 @@ section {
   padding: 2em 20px;
 }
 
+/* History Section Adjustment */
 .history {
-  background-color: #f7f7f7;
-  padding: 40px;
+  background-color: #f7f7f7; /* Ensure background */
+  padding: 20px; /* Add padding for better spacing */
+  margin-bottom: 20px; /* Add bottom margin for spacing from next section */
 }
 
 .hero {
@@ -67,7 +80,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 48px;
-  color: var(--accent1-color);
+  color:  --secondary-color: #000000;
   text-align: center;
   background-color: rgba(199, 193, 230, 0.5);
   padding: 20px;
@@ -106,34 +119,20 @@ header {
   grid-template-columns: 1fr 3fr;
   align-items: center;
   padding: 20px;
+  gap: 20px; /* Add gap for spacing between logo and nav */
 }
 
 header img {
   width: 100%;
   max-width: 150px;
+  grid-column: 1; /* Explicitly define logo column */
 }
-
-header {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-  padding: 20px;
-}
-
-header img {
-  width: 100%;
-  max-width: 150px;
-}
-
-header nav {
-  justify-self: end;
-}
-
 
 nav {
+  grid-column: 2; /* Explicitly define nav column */
   display: flex;
+  justify-content: flex-end; /* Align nav links to the right */
   align-items: center;
-  padding: 0 20px;
   gap: 20px;
 }
 
@@ -157,26 +156,36 @@ nav a:hover {
   max-width: 100%;
 }
 
+/* Adventures Section */
 .adventures {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  padding: 40px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  gap: 20px; /* Spacing between items */
+  justify-content: space-around; /* Evenly distribute items across the row */
+  padding: 40px 20px;
+}
+
+.adventures {
+  display: flex;
+  flex-direction: column; /* Arrange items in a single column */
+  align-items: center; /* Center-align the images and captions */
+  gap: 20px; /* Space between each figure */
+  padding: 40px 20px;
 }
 
 .adventures figure {
-  margin: 0;
+  display: flex;
+  flex-direction: column; /* Stack image and caption vertically within each figure */
+  align-items: center;
+  text-align: center;
 }
 
-.adventures figcaption {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-}
+.adventures img {
+  width: auto; /* Keep the original width */
+  max-width: 100%; /* Ensure it fits within the container if needed */
+  height: auto;
 
-.sociallinks {
-  display: block;
-  color: var(--accent1-color);
+);
 }
 
 .sociallinks li {
@@ -184,18 +193,21 @@ nav a:hover {
 }
 
 .sociallinks img {
-  width: 40px;
+  width: 40px; /* Original size */
   height: 40px;
-  margin: 10px;
+  margin: 10px; /* Adjust margin if needed */
 }
 
+
+/* Footer Styles */
 footer {
-  text-align: left;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 20px;
   background-color: #333;
   color: #fff;
+  text-align: left;
 }
 
 footer p {
@@ -218,6 +230,15 @@ footer img {
   height: auto;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Main Content Styles */
 main > section {
   margin: 20px;
 }
@@ -226,6 +247,7 @@ main > .hero {
   margin-bottom: 20px;
 }
 
+/* Image Gallery Styles */
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -240,10 +262,12 @@ main > .hero {
   border-radius: 10px;
 }
 
+/* Company Info Styles */
 .company-info {
   margin-bottom: 40px;
 }
 
+/* Wireframe Link Styles */
 .wireframe-link {
   font-size: 14px;
   color: var(--secondary-color);
@@ -252,11 +276,4 @@ main > .hero {
 
 .wireframe-link:hover {
   color: var(--accent1-color);
-}
-
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
