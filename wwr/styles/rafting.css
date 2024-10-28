@@ -141,9 +141,6 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
-  color: var(--primary-color);
-}
 
 .google-map {
   width: 600px;
