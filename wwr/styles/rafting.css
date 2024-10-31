@@ -79,7 +79,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 48px;
-  color:  var(--secondary-color);
+  color: var(--secondary-color);
   text-align: center;
   background-color: rgba(199, 193, 230, 0.5);
   padding: 20px;
@@ -113,6 +113,7 @@ section {
   margin-bottom: 20px;
 }
 
+/* Header and Navigation Styles */
 header {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -158,14 +159,6 @@ nav a:hover {
 /* Adventures Section */
 .adventures {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next row */
-  gap: 20px; /* Spacing between items */
-  justify-content: space-around; /* Evenly distribute items across the row */
-  padding: 40px 20px;
-}
-
-.adventures {
-  display: flex;
   flex-direction: column; /* Arrange items in a single column */
   align-items: center; /* Center-align the images and captions */
   gap: 20px; /* Space between each figure */
@@ -185,6 +178,7 @@ nav a:hover {
   height: auto;
 }
 
+/* Social Links Styles */
 .sociallinks li {
   margin-right: 20px;
 }
@@ -194,7 +188,6 @@ nav a:hover {
   height: 40px;
   margin: 10px; /* Adjust margin if needed */
 }
-
 
 /* Footer Styles */
 footer {
@@ -232,6 +225,11 @@ footer img {
   footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
   }
 }
 
@@ -274,7 +272,6 @@ main > .hero {
 }
 
 /* Wireframe Link Styles */
-
 footer a[href*="moqups.com"] { /* Selects the wireframe link based on the URL */
   color: #ffffff;
   text-decoration: none; /* Remove underline */
@@ -297,38 +294,6 @@ body {
   line-height: 1.6;
   background-color: #f9f9f9; /* Light background for contrast */
   color: #333; /* Dark text for readability */
-}
-
-/* Header styles */
-header {
-  background: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-header img {
-  max-width: 150px; /* Limit logo size */
-}
-
-/* Navigation styles */
-nav {
-  margin: 10px 0;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Main content styles */
-main {
-  padding: 20px;
 }
 
 /* Trip descriptions */
@@ -394,11 +359,4 @@ footer {
 .sociallinks img {
   width: 20px; /* Size for social icons */
   vertical-align: middle;
-}
-
-@media (max-width: 768px) {
-  nav a {
-      display: block;
-      margin: 5px 0;
-  }
 }
