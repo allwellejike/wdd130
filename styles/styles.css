@@ -6,8 +6,27 @@
 
 header, .grid, footer {
     max-width: 840px;
-    margin: 0 auto
-  }
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
 .grid {
     display: grid;
@@ -50,7 +69,6 @@ nav a {
   
 h1 {
     color: steelblue;
-    
     padding: .5rem;
     border-bottom: 2px solid #30538f;
 }
@@ -73,7 +91,6 @@ p {
     margin: 1em;
 }
   
- 
 aside {
     position: relative;
     width: 20em;
@@ -97,8 +114,7 @@ footer {
     text-align: center;
 }
   
- /* Class Selectors */
- .box {
+.box {
     margin: 1rem;
     border: 1px solid rgba(0, 0, 0, .1);
     padding: 1rem;
@@ -108,4 +124,29 @@ footer {
 
 .indent {
     padding-left: 2rem;
+}
+
+.newsletter {
+    background-color: #f0f8ff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsletter input {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.cta {
+    text-align: center;
+    padding: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: steelblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
