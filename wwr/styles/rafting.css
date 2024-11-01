@@ -51,14 +51,29 @@ nav a:hover {
   color: var(--primary-color);
 }
 
+.heading1 {
+    color: var(--secondary-color);
+    font-size: 48px;
+   
+}
+
+section{
+  text-align: center;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+
+
 /* Hero Section */
 .hero {
   position: relative;
   background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
-  height: auto;; /* Adjust height */
-  width: 100%;
+  height: auto; /* Adjust height */
+  width: 70%;
+  margin: 0 auto;
 
 }
 
@@ -69,12 +84,20 @@ nav a:hover {
   text-align: center;
 }
 
+.hero img{
+  width: 100%;
+}
+
 /* Grid Layout */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
+}
+
+.box img{
+  width: 100%;
 }
 
 main, aside {
@@ -86,6 +109,7 @@ main, aside {
 
 main h1 {
   font-size: 24px;
+  text-align: center;
 }
 
 aside h2 {
@@ -119,6 +143,37 @@ aside h2 {
   border-radius: 5px;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #3A1B01; /* Green background for header */
+  color: white; /* White text */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light grey for even rows */
+}
+
+tr:hover {
+  background-color: #ddd; /* Highlight row on hover */
+}
+
+h2 {
+  text-align: center;
+}
+
+
 /* Call to Action Section */
 .cta {
   background-color:#534800;
@@ -138,7 +193,13 @@ aside h2 {
 }
 
 .cta-button:hover {
-  background-color: var(--accent1-color);
+  background-color: #534800;
+}
+
+.call-to-action {
+  color: #3A1B01;
+  padding: 20px;
+  text-align: center;
 }
 
 .call-to-action a{
@@ -186,6 +247,8 @@ footer a {
   .grid {
     grid-template-columns: 1fr; /* Stack in one column on smaller screens */
   }
+
+
 
   header {
     flex-direction: column; /* Stack header items */
