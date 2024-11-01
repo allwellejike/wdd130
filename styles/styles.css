@@ -11,22 +11,26 @@ header, .grid, footer {
 
 .hero {
     position: relative;
-}
-
-.hero-image {
-    width: 100%;
     height: auto;
+    width: 100%; /* Ensure the hero section takes the full width */
+    max-width: 840px; /* Match the max width with header/grid */
+    margin: 0 auto; /* Center the hero section */
+    background-image: url('images/hero.jpg'); /* Add your background image here */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
 }
-
-.hero-title {
+.hero-h1 {
     position: absolute;
-    top: 20%;
+    top: 20%; /* Adjust if necessary */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+
+
 
 .grid {
     display: grid;
@@ -51,7 +55,7 @@ body {
 }
   
 nav {
-    background-color: steelblue;
+    background-color: rgb(1, 23, 41);
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
@@ -68,7 +72,7 @@ nav a {
 }
   
 h1 {
-    color: steelblue;
+    color: rgb(1, 23, 41);
     padding: .5rem;
     border-bottom: 2px solid #30538f;
 }
@@ -118,7 +122,7 @@ footer {
     margin: 1rem;
     border: 1px solid rgba(0, 0, 0, .1);
     padding: 1rem;
-    background-color: #ddd;
+    background-color: #ffff;
     color: #000; 
 }
 
@@ -145,7 +149,7 @@ footer {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: steelblue;
+    background-color: rgb(1, 23, 41);
     color: white;
     text-decoration: none;
     border-radius: 5px;
